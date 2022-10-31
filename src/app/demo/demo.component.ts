@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoComponent implements OnInit {
   
+  query : String;
 
   constructor() { 
-
+    this.query = "Abena";
   }
 
  
@@ -27,7 +28,7 @@ export class DemoComponent implements OnInit {
 
   showArtist(item){
     this.course = item.name;
-    console.log(item);
+    // item.highlight = !item.highlight
     
   }
 
