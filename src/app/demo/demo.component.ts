@@ -11,5 +11,13 @@ export class DemoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  title = 'DEMO APP';
+  myobject = {
+    color: 'red'
+  };
+
+  myArr = ['a','e','i','o', 'u'];
+
+  course = "Angular";
 
 }
