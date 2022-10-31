@@ -23,10 +23,9 @@ export class DemoComponent implements OnInit {
 
   myArr = ['a','e','i','o', 'u'];
 
-  course = "Angular";
+  course = "";
 
-  showArtist(event, item){
-    console.log(event);
+  showArtist(item){
     this.course = item.name;
     console.log(item);
     

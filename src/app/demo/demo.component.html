@@ -4,7 +4,7 @@
 <li *ngFor="let item of myArr">{{item}}</li>
 
 <hr/>
-<p>Name of Course :: {{course}}</p>
+<p *ngIf="course">Name of Course :: {{course}}</p>
 
 <button class="btn btn-outline-success">Go Back</button>
 
@@ -15,7 +15,7 @@
       <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
         <div class="list-group" >
           <a href="#" class="list-group-item list-group-item-action flex-column align-items-start"
-          *ngFor="let artist of artists" (click)="showArtist($event, artist)">
+          *ngFor="let artist of artists" (click)="showArtist(artist)">
               <div class="media">
                 <div class="media-body align-self-center">
                   <h5 class="m-0">{{artist.name}}</h5>
