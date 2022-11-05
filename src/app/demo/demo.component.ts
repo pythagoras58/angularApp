@@ -9,7 +9,11 @@ import { HttpClient } from '@angular/common/http';
 export class DemoComponent implements OnInit {
   
   query : String;
-  artists : object;
+  artists : any[];
+
+  showArtist(item){
+    this.query = item.name;
+  }
 
   constructor(private http: HttpClient) { 
     this.query = "Abena";
@@ -19,7 +23,7 @@ export class DemoComponent implements OnInit {
  
 
   ngOnInit(): void {
-    this.http.get<Object>('../assets/data.json').subscribe(
+    this.http.get<any[]>('../assets/data.json').subscribe(
       data=>{
         this.artists = data
       }
@@ -34,14 +38,9 @@ export class DemoComponent implements OnInit {
 
   myArr = ['a','e','i','o', 'u'];
 
-  course = "";
+  // course = "";
 
-  showArtist(item){
-    this.course = item.name;
-  }
+ 
 
   
-
-    
-
 }
